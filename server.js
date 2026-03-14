@@ -25,7 +25,9 @@ app.use("/api/orders", require("./routes/orderRoutes"));
 app.use("/api/rewards", require("./routes/rewardRoutes"));
 app.use("/api/admin", require("./routes/adminRoutes"));
 app.use("/api/payment", require("./routes/paymentRoutes"));
-
+app.get("/",()=>{
+console.log("Get request");
+});
 const authMiddleware = require("./middleware/authMiddleware");
 const Coupon = require("./models/Coupon");
 
